@@ -8,6 +8,6 @@
 #include <vector>
 
 std::vector<std::string> stringsplit(const std::string&, const std::string&);
-int stringsplit(std::vector<std::string>&, const std::string&, const std::string&);
+std::vector<std::string> stringsplit(std::vector<std::string>&, const std::string&, const std::string&);
 
 #endif

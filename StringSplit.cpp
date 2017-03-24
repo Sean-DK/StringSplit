@@ -8,16 +8,15 @@ std::vector<std::string> stringsplit(const std::string& str, const std::string& 
   std::vector<std::string> result;
   if (delim == "" || str == "") return result;
   else if (delim.size() >= 1) {
-    int x = stringsplit(result, str, delim);
-    return result;
+    return stringsplit(result, str, delim);
   }
   else return result;
 }
 
-int stringsplit(std::vector<std::string>& result, const std::string& str, const std::string& delim) {
+std::vector<std::string> stringsplit(std::vector<std::string>& result, const std::string& str, const std::string& delim) {
   int delimPos = 0;
   if (str == "") {
-    return 0;
+    return result;
   }
   else if (str.find(delim) > 0 && str.find(delim) < 32766) {
     std::string temp = "";
@@ -30,9 +29,10 @@ int stringsplit(std::vector<std::string>& result, const std::string& str, const 
     for (int i = delimPos + delim.size(); i < str.size(); i++) {
       temp += str[i];
     }
-    int x = stringsplit(result, temp, delim);
+    return stringsplit(result, temp, delim);
   }
   else {
     result.push_back(str);
+    return result;
   }
 }
