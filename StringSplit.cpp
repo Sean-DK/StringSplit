@@ -7,9 +7,7 @@
 std::vector<std::string> stringsplit(const std::string& str, const std::string& delim) {  
   std::vector<std::string> result;
   if (delim == "" || str == "") return result;
-  else if (delim.size() >= 1) {
-    return stringsplit(result, str, delim);
-  }
+  else if (delim.size() >= 1) return stringsplit(result, str, delim);
   else return result;
 }
 
