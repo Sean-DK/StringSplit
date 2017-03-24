@@ -98,10 +98,10 @@ int main() {
   
 
 
-//11. Run time checks
+//Run time checks
   {
     std::printf("\n\n\tRun time:\n");
-    //Iterative 1,000 words
+    //1,000 words
     {
       std::ifstream file;
       std::string test, temp;
@@ -114,7 +114,7 @@ int main() {
       std::printf("\t1,000 words: %f seconds\n", double((end - start)) / CLOCKS_PER_SEC);
     }
     
-    //Iterative 10,000 words
+    //10,000 words
     {
       std::ifstream file;
       std::string test, temp;
@@ -127,7 +127,7 @@ int main() {
       std::printf("\t10,000 words: %f seconds\n", double((end - start)) / CLOCKS_PER_SEC);
     }
 
-    //Iterative 100,000 words
+    //100,000 words
     {
       std::ifstream file;
       std::string test, temp;
