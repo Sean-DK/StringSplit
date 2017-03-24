@@ -10,4 +10,7 @@
 std::vector<std::string> stringsplit(const std::string&, const std::string&);
 std::vector<std::string> stringsplit(std::vector<std::string>&, const std::string&, const std::string&);
 
+std::vector<std::string> itr_stringsplit(const std::string&, const std::string&);
+std::vector<std::string> itr_stringsplit(std::vector<std::string>&, const std::string&, const std::string&);
+
 #endif
