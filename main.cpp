@@ -103,6 +103,20 @@ int main() {
     testResult(12, vec[0] == "one" && vec[1] == "two" && vec.size() == 2);
   }
 
+  //13. Adjacent delimiters at the beginning of string
+  {
+    std::string test = "   one two";
+    std::vector<std::string> vec = stringsplit(test, " ");
+    testResult(13, vec[0] == "one" && vec[1] == "two" && vec.size() == 2);
+  }
+
+  //13. Adjacent delimiters at the end of string
+  {
+    std::string test = "one two   ";
+    std::vector<std::string> vec = stringsplit(test, " ");
+    testResult(14, vec[0] == "one" && vec[1] == "two" && vec.size() == 2);
+  }
+ 
 //Run time checks
   {
     std::printf("\n\n\tRun time:\n");
