@@ -96,7 +96,12 @@ int main() {
     testResult(11, vec.empty());  
   }
   
-
+  //12. Adjacent delimiters
+  {
+    std::string test = "one    two";
+    std::vector<std::string> vec = stringsplit(test, " ");
+    testResult(12, vec[0] == "one" && vec[1] == "two" && vec.size() == 2);
+  }
 
 //Run time checks
   {
